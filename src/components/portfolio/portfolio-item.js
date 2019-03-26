@@ -3,13 +3,14 @@ import { Link } from "react-router-dom";
 
 
 export default function(props) {
+
+ 
+      const { id, description, thumb_image_url, logo} = props.item;
     return (
       <div>
-          <h3>{props.title}</h3>
-          <h4>{props.description}</h4>
-          <h5>{props.url}</h5>
+          <div>{description}</div>
 
-          <Link to={`/portfolio/${props.slug}`}>Link</Link>
+          <Link to={`/portfolio/${id}`}>Link</Link>
       </div>
     );
   }
